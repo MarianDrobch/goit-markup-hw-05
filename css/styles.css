@@ -554,7 +554,7 @@ margin-left: auto;
 .subscribe-btn {
     border-radius: 4px;
     padding: 8px 24px;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
 
     display: flex;
@@ -569,6 +569,7 @@ margin-left: auto;
 
     cursor: pointer;
     background-color: #4d5ae5;
+    border: none;
 
     transition-property: background-color;
     transition-duration: 250ms;
@@ -618,6 +619,7 @@ margin-left: auto;
     width: 408px;
     min-height: 584px;
     padding: 72px 24px 24px;
+    margin-bottom: 8px;
 
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background: #fcfcfc;
@@ -680,6 +682,7 @@ margin-left: auto;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    margin-bottom: 16px;
 }
 
 .label-text {
@@ -722,7 +725,9 @@ margin-left: auto;
     left: 19px;
     top: 50%;
     transform: translateY(-50%);
-    
+    left: 16px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-modal:focus + .input-icon {
@@ -735,19 +740,28 @@ margin-left: auto;
 
 .area-comment {
     border: 1px solid rgba(46, 47, 66, 0.4);
-        border-radius: 4px;
-        width: 100%;
-        height: 120px;
-    
-        padding: 8px 16px;
-    
-        background-color: transparent;
-        outline: transparent;
-    
-        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        margin-bottom: 8px;
+    border-radius: 4px;
+    width: 100%;
+    height: 120px;
 
-        resize: none;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    
+    padding: 8px 16px;
+    
+    background-color: transparent;
+    outline: transparent;
+    
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    resize: none;
+}
+
+.area-comment:focus,
+.area-comment:hover {
+    border-color: #4D5AE5;
 }
 
 
@@ -769,7 +783,7 @@ margin-left: auto;
 }
 
 .checkbox-label span {
-    display: block;
+    display: inline-flex;
 
     width: 16px;
     height: 16px;
@@ -789,10 +803,9 @@ margin-left: auto;
 }
 
 .checkbox-input:checked + .checkbox-label span {
-    border-radius: 2px;
     background-color: #404bbf;
-    border: 1px solid #404bbf;
     fill: #f4f4fd;
+    border: none;
 }
 
 
@@ -808,6 +821,7 @@ margin-left: auto;
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
 
 .link-check {
     text-decoration: underline;
