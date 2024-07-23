@@ -776,22 +776,18 @@ margin-left: auto;
     line-height: 117%;
     letter-spacing: 0.04em;
     color: #8e8f99;
-
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
 }
 
 .checkbox-label span {
-    display: inline-flex;
-
+    
     width: 16px;
     height: 16px;
+    margin-right: 8px;
 
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
 
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 
